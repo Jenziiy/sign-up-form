@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400&display=swap');
 
 html {
 height: 100%;
 width: 100%;
 font-family: Teko;
-letter-spacing: 0.03em;
+letter-spacing: 0.1em;
 font-size: 100%;
+color:rgb(21, 21, 143);
 }
 
 body {
@@ -55,7 +56,7 @@ text-align: center;
 }
 
 .main {
-  flex: 0 1 auto;
+  flex: 0 1 100%;
   height: 33%;
   padding: 0 8px 1px 8px;
 
@@ -75,6 +76,9 @@ text-align: center;
   font-size: min(2.4vh, 1.8vw);
 }
 .main.form {
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: column;
   background-color: rgb(128, 0, 128, 0.04);
   box-shadow: 0px 17px 30px rgba(250, 204, 225, 0.4);
 }
@@ -90,7 +94,33 @@ grid-template-rows: repeat(3,1fr);
 
 #registration_form div {
 display: flex;
+flex: auto;
 flex-flow: column;
+}
+
+.main.footer {
+  position: relative;
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: column wrap;
+  margin: 40px 4px 0px 4px;
+  
+}
+button {
+  width: 200px;
+  height: 50px;
+  background-color: hotpink;
+  border: rebeccapurple solid;
+  border-radius: 10px;
+  box-shadow: 0.2px 0.2px 7px;
+  position: absolute;
+  bottom: 25vmin;
+  left: 3vmin;
+}
+.footer h3 {
+  position: absolute;
+  bottom: 17vmin;
+  left: 3vmin;
 }
 
 input:focus {
@@ -99,4 +129,54 @@ input:focus {
 }
 input:invalid {
   box-shadow:rgba(230, 8, 8, 0.825) 3px 7px 20px;
+}
+
+@media only screen and (max-width: 950px) {
+  #registration_form {
+    display: grid;
+    padding-left: 2vw;
+    grid-gap: 1% 20%;
+    max-width: 40vw;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6,1fr);
+    }
+    .header {
+      max-height: 150px;
+    }
+
+    .form {
+      max-height: 200px;
+    }
+
+    .footer {
+      height: 250px;
+      position: relative;
+    }
+
+    .page-content, body, .section, .content, .cover {
+      display: flex;
+      flex-flow: column;
+    }
+
+    .cover, .banner {
+      max-height: 100px;
+      margin: 0;
+    }
+    .banner {
+      width: 50%;
+      margin-left: 23%;
+    }
+
+    button {
+      position: absolute;
+      bottom: 70px;
+      left: 21px;
+    }
+
+    .footer h3 {
+      position: absolute;
+      bottom: 5px;
+      left: 22px;
+    }
+
 }
