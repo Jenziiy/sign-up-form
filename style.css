@@ -109,10 +109,12 @@ flex-flow: column;
 button {
   width: 200px;
   height: 50px;
-  background-color: hotpink;
-  border: rebeccapurple solid;
+  background-color: rgb(225, 171, 198, 0.4);
+  color: rgb(109, 107, 107);
+  font-weight: 600;
+  border: rgba(212, 207, 218, 0.75) solid thin;
   border-radius: 10px;
-  box-shadow: 0.2px 0.2px 7px;
+  box-shadow: 0 3px 3px rgba(245, 204, 211, 0.884);
   position: absolute;
   bottom: 25vmin;
   left: 3vmin;
@@ -121,6 +123,13 @@ button {
   position: absolute;
   bottom: 17vmin;
   left: 3vmin;
+}
+
+input {
+  border: grey solid;
+  border-radius: 6px;
+  border-width: thin;
+  box-shadow:rgb(219, 192, 206) 0px 3px 3px;
 }
 
 input:focus {
