@@ -124,7 +124,29 @@ button {
   bottom: 17vmin;
   left: 3vmin;
 }
+input + span {
+  position: relative;
+}
 
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: -24px;
+}
+
+input:invalid {
+  border: 0.1px solid red;
+}
+
+input:invalid + span::before {
+  content: '✖';
+  color: red;
+}
+
+input:valid + span::before {
+  content: '✓';
+  color: green;
+}
 input {
   border: grey solid;
   border-radius: 6px;
@@ -136,7 +158,8 @@ input:focus {
   box-shadow:rgba(250, 204, 225, 0.6) 0px 7px 30px;
   border: solid rgb(219, 192, 206);
 }
-input:invalid {
+
+.invalid {
   box-shadow:rgba(230, 8, 8, 0.825) 3px 7px 20px;
 }
 
